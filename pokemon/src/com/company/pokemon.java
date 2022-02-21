@@ -1,18 +1,45 @@
 package com.company;
 
 public class pokemon {
+    protected int number;
+    protected String name;;
     protected int health;
     protected int level;
-    protected String name;
-    protected String position;
     protected String type;
 
-    public pokemon(int health, int level, String name, String position, String type) {
+    public pokemon(int number, String name, int health, int level, String type) {
+        this.number = number;
+        this.name = name;
         this.health = health;
         this.level = level;
-        this.name = name;
-        this.position = position;
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "pokemon{" +
+                "number=" + number +
+                ", name='" + name + '\'' +
+                ", health=" + health +
+                ", level=" + level +
+                ", type='" + type + '\'' +
+                '}';
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getHealth() {
@@ -31,22 +58,6 @@ public class pokemon {
         this.level = level;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
     public String getType() {
         return type;
     }
@@ -55,5 +66,6 @@ public class pokemon {
         this.type = type;
     }
 }
+
 
 
